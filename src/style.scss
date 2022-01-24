@@ -1,0 +1,89 @@
+$breakpoints:(
+    first:(min-width:320px),
+    second:(min-width:500px),
+    third:(min-width:720px),
+);
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@mixin mq($breakpoint){
+    $size:map-get($breakpoints,$breakpoint);
+    @if($size){
+        @media #{$size}{
+            @content
+        }
+    }
+};
+@include mq(first){
+    .container{
+        font-family: 'Josefin Sans';
+     
+        
+        display:flex;
+        flex-direction: column;
+        max-width:100%;
+       height:fit-content;
+       
+
+    }
+    #canvas{
+        background:linear-gradient(165deg,gray,gray,skyblue,blue);
+        z-index:-1;
+        position:absolute;
+    }
+    .navbarul{
+        display:flex;
+        justify-content: space-evenly;
+        list-style-type:none;
+        height:10vh;
+        border-bottom:5px solid black;
+        border-top:5px solid black;
+        font-size:1.5rem;
+        align-items: center;
+        font-weight:bold;
+        -webkit-text-stroke:.3px green;
+        background:linear-gradient(45deg,yellow,orange,red)
+        
+
+    }
+    .zawartosc{
+    
+        width:100%;
+        height:90vh;
+      
+        z-index:2;
+    }
+    /*About ME ---------------------*/
+    .aboutMe{
+        text-align:center;
+        font-size:1.5rem;
+        max-height:fit-content;
+    }
+    .circle{
+        width:50%;
+        animation:runCircle 10s infinite linear;
+    }
+    @keyframes runCircle{
+        from{transform:rotate(360deg)}
+        to{transform:rotate(0deg)}
+    }
+    /*CONTACT -------------------------------*/
+    .contact{
+        text-align:center;
+        font-size:1.5rem;
+    }
+    .telefon{
+        width:40%;
+    }
+    .h1contact{
+        font-weight:bold;
+        color:lighten(yellow,1%);
+        -webkit-text-stroke:.5px darkblue;
+    }
+    .textarea{
+        min-height:100px;
+        width:70%;
+    }
+}
