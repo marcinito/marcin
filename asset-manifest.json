@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/marcin/static/css/main.ec0cf05d.css",
+    "main.js": "/marcin/static/js/main.6d75f116.js",
+    "static/media/wozek.png": "/marcin/static/media/wozek.1885e982d3243451d810.png",
+    "static/media/telefon.png": "/marcin/static/media/telefon.ebe7c95e6e87a28be152.png",
+    "static/media/kolo.png": "/marcin/static/media/kolo.d6073e74af6de2db199a.png",
+    "static/media/lorry.png": "/marcin/static/media/lorry.021d034afa63dc28c99d.png",
+    "static/media/lorrygif.gif": "/marcin/static/media/lorrygif.45b759ae20e579028f20.gif",
+    "static/media/auto.png": "/marcin/static/media/auto.dafbf6af2230918339f2.png",
+    "static/media/react2.png": "/marcin/static/media/react2.b5e3b2258e60f0b1cf40.png",
+    "static/media/html.png": "/marcin/static/media/html.663842791fd8090149e3.png",
+    "static/media/css.png": "/marcin/static/media/css.9bf706dd8154d82aadf7.png",
+    "index.html": "/marcin/index.html",
+    "main.ec0cf05d.css.map": "/marcin/static/css/main.ec0cf05d.css.map",
+    "main.6d75f116.js.map": "/marcin/static/js/main.6d75f116.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec0cf05d.css",
+    "static/js/main.6d75f116.js"
+  ]
+}
