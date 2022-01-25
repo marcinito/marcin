@@ -16,10 +16,10 @@ function Contact(props) {
           
           <br/>
           
-          <h1 className="h1contact">...or send me e-mail</h1>
+          <h1 className="h1contact2">...or send me e-mail</h1>
 
             
-          <form  action="https://formsubmit.co/kalwara_marcin@o2.pl" method="POST" >
+          <form className="form"  action="https://formsubmit.co/kalwara_marcin@o2.pl" method="POST" >
               <label htmlFor="email" className="label">Enter your e-mail</label>
               <br/>
               <input name="email" type="email" id="email"></input><br/>
@@ -27,6 +27,7 @@ function Contact(props) {
               <br/>
               <textarea name="email" id="txtarea" className="textarea"></textarea>
               <br/>
+              
               <button name="email" type="submit" className="send">send</button>
           </form>
     

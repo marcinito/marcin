@@ -9,11 +9,30 @@ import html from '../img/html.png'
 import react  from '../img/react2.png'
 function Credential(props) {
   const canvasRef=useRef()
-useEffect(()=>{
+  const lasElementRef=useRef()
 
-})
+  
+// useEffect(()=>{
+//   let dwa=Number(window.getComputedStyle(lasElementRef.current).getPropertyValue("content").slice(0,4))
+// const canvas=canvasRef.current
+// const ctx=canvas.getContext("2d")
+// let CANVAS_HEIGHT=window.innerHeight
+// canvas.width=window.innerWidth
+// canvas.height=window.innerHeight
+
+
+
+
+// console.log(window.document)
+// window.addEventListener("scroll",()=>{
+
+//   if(canvas.height>dwa )return
+//  canvas.height+=100
+// })
+// })
   return <div>
-    <canvas id="canvas" ref={canvasRef}></canvas>
+<div className="containerCred" ref={lasElementRef}>
+    {/* <canvas id="canvas" ref={canvasRef}></canvas> */}
     <div className="row"><img className="imgI" src={wozek} alt="wozek"></img><div className="describe"><p className="p">Forklift Driver with experience               </p> <em>COUNTERBALANCE</em>
    
    </div>
@@ -42,13 +61,13 @@ useEffect(()=>{
   <Link to="/java-script">FIND OUT MORE</Link>
   </span>
   </div>
-  <div className="row"><img className="imgI" src={react} alt="react"></img><div className="describe"><p className="p">
+  <div className="row"><img className="imgI" src={react} alt="react"></img><div className="describeReact"><p className="p">
 Knowledge of the react library</p><p className="describeP">I am know <span style={{color:"orange"}}>hook</span>, <span>react-router-dom</span>, <span style={{color:"green"}}>redux</span>, <span style={{color:"black",fontWeight:"bold"}}>react-bootstrap</span>, <span style={{color:"plum"}}> styled-components</span>,concepts how react works and soon i will lern more</p>
   
   </div>
 
   </div>
-  <div className="row"><img className="imgI" src={css} alt="react"></img><div className="describe"><p className="p">
+  <div className="row"><img className="imgI" src={css} alt="css"></img><div className="describeCss"><p className="p">
 Knowledge of Cascading Style Sheets </p><em style={{fontWeight:"bold",color:"skyblue",marginLeft:"3%"}}>What is this check ... <a href="https://en.wikipedia.org/wiki/CSS">link</a></em> 
   
   </div>
@@ -56,13 +75,14 @@ Knowledge of Cascading Style Sheets </p><em style={{fontWeight:"bold",color:"sky
   <Link to="/drive-licence">FIND OUT MORE</Link>
   </span> */}
   </div>
-  <div className="row"><img className="imgI" src={html} alt="html"></img><div className="describe"><p className="p">
-Knowledge of the HyperText Markup Language <span style={{fontWeight:"bold",color:"crimson"}}>(HTML)</span> </p><em style={{fontWeight:"bold",color:"skyblue",marginLeft:"3%"}}>What is this check ... <a href="https://pl.wikipedia.org/wiki/HTML">link</a></em> 
+  <div className="row"><img className="imgI" src={html} alt="html"></img><div className="describeHtml"><p className="p">
+Knowledge of the HyperText Markup Language <span style={{fontWeight:"bold",color:"crimson"}}>(HTML)</span> </p><em  style={{fontWeight:"bold",color:"skyblue",marginLeft:"3%"}}>What is this check ... <a href="https://pl.wikipedia.org/wiki/HTML">link</a></em> 
   
   </div>
   {/* <span className="link">
   <Link to="/drive-licence">FIND OUT MORE</Link>
   </span> */}
+  </div>
   </div>
   </div>;
 }
