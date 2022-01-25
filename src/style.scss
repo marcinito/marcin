@@ -1,12 +1,20 @@
 $breakpoints:(
     first:(min-width:320px),
     second:(min-width:500px),
-    third:(min-width:720px),
+    third:(min-width:700px),
+    four:(min-width:1000px),
 );
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+.return{
+    width:30%;
+    height:30px;
+    border-radius:40px;
+    background-color: lighten(orange,5%);
+    border:3px solid red;
 }
 @mixin mq($breakpoint){
     $size:map-get($breakpoints,$breakpoint);
@@ -22,11 +30,150 @@ $breakpoints:(
      
         
         display:flex;
-        flex-direction: column;
+     flex-direction: column;
         max-width:100%;
        height:fit-content;
        
 
+    }
+    .send{
+        width:100%;
+        height:30px;
+        border:3px solid lighten(blue,20%);
+        background-color: skyblue;
+    }
+    #canvas{
+        background:linear-gradient(165deg,gray,gray,skyblue,blue);
+        z-index:-1;
+        position:absolute;
+    }
+    .navbarul{
+        display:flex;
+        justify-content: space-evenly;
+        list-style-type:none;
+        height:10vh;
+        border-bottom:5px solid black;
+        border-top:5px solid black;
+        font-size:1.5rem;
+        align-items: center;
+        font-weight:bold;
+        
+        -webkit-text-stroke:.3px green;
+        background:linear-gradient(45deg,yellow,orange,red);
+        
+
+    }
+    .navbarul a{
+        text-decoration:none;
+    }
+    .zawartosc{
+    
+        width:100%;
+        height:90vh;
+      
+        z-index:2;
+    }
+    .link a{
+        font-weight:bold;
+    
+    }
+    /*About ME ---------------------*/
+    .aboutMe{
+        text-align:center;
+        font-size:1.5rem;
+        max-height:fit-content;
+    }
+    .circle{
+        width:50%;
+        animation:runCircle 10s infinite linear;
+    }
+    @keyframes runCircle{
+        from{transform:rotate(360deg)}
+        to{transform:rotate(0deg)}
+    }
+    /*CONTACT -------------------------------*/
+    .contact{
+        text-align:center;
+        font-size:1.5rem;
+    }
+    .telefon{
+        width:40%;
+    }
+    .h1contact{
+        font-weight:bold;
+        color:lighten(yellow,1%);
+        -webkit-text-stroke:.5px darkblue;
+    }
+    .textarea{
+        min-height:100px;
+        width:70%;
+    }
+    /*CREDENTAIL*/
+    .containerCred{
+        height:fit-content;
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+     
+        
+    }
+    .imgI{
+        width:50%;
+
+    }
+    .row{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        border:5px solid lighten(green,3%)
+    }
+    /*ForkLift*/
+    .forkliftPage{
+        text-align:center;
+    }
+    .h1Title{
+        color:darkorange;
+        margin-top:10%;
+    }
+    .h2Text{
+        color:darkgreen;
+    }
+.h1SecondTitle{
+    color:darkmagenta;
+}
+.h1Certify{
+    color:darkturquoise;
+}
+.nazwaFirmy{
+    color:darkblue;
+}
+/*     Lorry         */
+.loryPage{
+    text-align:center;
+}
+/*Java Script*/
+.jsPage{
+    text-align:center;
+}
+}
+/* next next next next next next next next next next next next next next next next next*/
+@include mq(second){
+    .container{
+        font-family: 'Josefin Sans';
+     
+       
+        display:flex;
+    
+        max-width:100%;
+       height:fit-content;
+       
+
+    }
+    .send{
+        width:71%;
+        height:30px;
+        border:3px solid lighten(blue,20%);
+        background-color: skyblue;
     }
     #canvas{
         background:linear-gradient(165deg,gray,gray,skyblue,blue);
@@ -86,4 +233,387 @@ $breakpoints:(
         min-height:100px;
         width:70%;
     }
+    /*CREDENTAIL*/
+    .containerCred{
+        height:fit-content;
+        max-width:100%;
+      
+      
+       
+     
+        
+    }
+    .imgI{
+        width:20%;
+        border-right:1px solid green;
+    
+
+    }
+    .row{
+        display:flex;
+        flex-direction: row;
+        border:1px solid green;
+     
+    }
+    .describe{
+       
+        width:50%;
+        font-size:1.5rem;
+    }
+    .describeReact{
+        font-weight:bold;
+    }
+    /*ForkLift*/
+    .forkliftPage{
+        text-align:center;
+        font-size:1.2rem;
+    }
+    .h1Title{
+        color:darkorange;
+        margin-top:10%;
+    }
+    .h2Text{
+        color:darkgreen;
+    }
+.h1SecondTitle{
+    color:darkmagenta;
+}
+.h1Certify{
+    color:darkturquoise;
+}
+.nazwaFirmy{
+    color:darkblue;
+}
+/*     Lorry         */
+.loryPage{
+    text-align:center;
+}
+/*Java Script*/
+.jsPage{
+    text-align:center;
+    font-size:1.3rem;
+}
+}
+/*Trzecia wersja next next next next next next next next next next next next next next next next next next next*/
+@include mq(third){
+
+    .container{
+        font-family: 'Josefin Sans';
+    
+       
+        display:flex;
+    
+        max-width:100%;
+       height:fit-content;
+       
+
+    }
+    #canvas{
+        background:linear-gradient(165deg,gray,gray,skyblue,blue);
+        z-index:-1;
+        position:absolute;
+    }
+    .navbarul{
+        display:flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       column-gap:10px;
+        list-style-type:none;
+        height:15vh;
+        border-bottom:5px solid black;
+        border-top:5px solid black;
+        font-size:1.8rem;
+        font-weight:bold;
+        -webkit-text-stroke:.3px green;
+        background:linear-gradient(45deg,yellow,orange,red)
+        
+
+    }
+    .navbarul a {
+        text-decoration:none;
+    }
+    .zawartosc{
+    
+        width:100%;
+        height:90vh;
+      
+        z-index:2;
+    }
+    /*About ME ---------------------*/
+    .aboutMe{
+        text-align:center;
+        font-size:1.5rem;
+        max-height:fit-content;
+    }
+    .circle{
+        width:50%;
+        animation:runCircle 10s infinite linear;
+    }
+    @keyframes runCircle{
+        from{transform:rotate(360deg)}
+        to{transform:rotate(0deg)}
+    }
+    /*CONTACT -------------------------------*/
+    .contact{
+        width:100%;
+        text-align:center;
+        font-size:1.5rem;
+        
+    }
+    .telefon{
+        width:40%;
+    }
+    .h1contact{
+        font-weight:bold;
+        color:lighten(yellow,1%);
+        -webkit-text-stroke:.5px darkblue;
+    }
+    .textarea{
+        min-height:100px;
+        width:70%;
+    }
+    /*CREDENTAIL*/
+    .containerCred{
+        height:fit-content;
+        max-width:100%;
+      
+      
+       
+     
+        
+    }
+    .imgI{
+        width:13%;
+        border-right:1px solid green;
+    
+
+    }
+    .row{
+        display:flex;
+        flex-direction: row;
+        border:1px solid green;
+     
+    }
+    .describe{
+       
+        width:70%;
+        font-size:2rem;
+    }
+    .describeReact{
+        font-weight:bold;
+    }
+    /*ForkLift*/
+    .forkliftPage{
+        text-align:center;
+        font-size:1.2rem;
+    }
+    .h1Title{
+        color:darkorange;
+        margin-top:10%;
+    }
+    .h2Text{
+        color:darkgreen;
+    }
+.h1SecondTitle{
+    color:darkmagenta;
+}
+.h1Certify{
+    color:darkturquoise;
+}
+.nazwaFirmy{
+    color:darkblue;
+}
+/*     Lorry         */
+.loryPage{
+    text-align:center;
+}
+/*Java Script*/
+.jsPage{
+    text-align:center;
+    font-size:1.3rem;
+}
+
+}
+@include mq(four){
+    .container{
+        font-family: 'Josefin Sans';
+    
+       
+        display:flex;
+    margin-left:auto;
+    margin-right:auto;
+        max-width:80%;
+       height:fit-content;
+       
+
+    }
+    .send{
+        width:40%;
+        height:30px;
+        border:3px solid lighten(blue,20%);
+        background-color: skyblue;
+    }
+    #canvas{
+        background:linear-gradient(165deg,gray,gray,skyblue,blue);
+        z-index:-1;
+        position:absolute;
+    }
+    .navbarul{
+        display:flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       column-gap:10px;
+        list-style-type:none;
+        height:15vh;
+        border-bottom:1px solid black;
+        border-top:1px solid black;
+        border-left:1px solid black;
+        border-right:1px solid black;
+        font-size:1.8rem;
+        font-weight:bold;
+        -webkit-text-stroke:.3px green;
+        background:linear-gradient(45deg,yellow,orange,red)
+        
+
+    }
+    .navbarul a {
+        text-decoration:none;
+    }
+    .zawartosc{
+    
+        width:100%;
+        border:1px solid black;
+      height:fit-content;
+        z-index:2;
+    }
+ .form{
+  
+     position:relative;
+     top:-5%;
+    
+ }
+
+    /*About ME ---------------------*/
+    .aboutMe{
+        text-align:center;
+        font-size:1.5rem;
+        max-height:fit-content;
+       
+        height:85vh;
+    }
+    .circle{
+        width:30%;
+        animation:runCircle 10s infinite linear;
+        margin-top:5%;
+    }
+    @keyframes runCircle{
+        from{transform:rotate(360deg)}
+        to{transform:rotate(0deg)}
+    }
+    /*CONTACT -------------------------------*/
+    .contact{
+        width:100%;
+        text-align:center;
+        font-size:1.5rem;
+       
+        height:85vh;
+    }
+    .telefon{
+        width:20%;
+    }
+    .h1contact{
+        font-weight:bold;
+        color:lighten(yellow,1%);
+        -webkit-text-stroke:.5px darkblue;
+    }
+    .h1contact2{
+        font-weight:bold;
+        color:lighten(yellow,1%);
+        -webkit-text-stroke:.5px darkblue;
+        position:relative;
+        top:-5%;
+    }
+    .fon{
+        position:relative;
+        top:-3%;
+        color:orange;
+        -webkit-text-stroke:1px skyblue;
+    }
+    .textarea{
+        min-height:100px;
+        width:70%;
+    }
+    /*CREDENTAIL*/
+    .containerCred{
+        height:fit-content;
+        max-width:100%;
+      
+      
+       
+     
+        
+    }
+    .imgI{
+        width:13%;
+        border-right:1px solid green;
+    
+
+    }
+    .row{
+        display:flex;
+        flex-direction: row;
+        border:1px solid green;
+     
+    }
+    .describe{
+       
+        width:70%;
+        font-size:2rem;
+    }
+    .describeReact{
+        font-weight:bold;
+    }
+    /*ForkLift*/
+    .forkliftPage{
+        text-align:center;
+        font-size:1.2rem;
+        
+        
+    }
+    .ulListRes{
+        list-style-type:none;
+    }
+    .h1Title{
+        color:darkorange;
+        margin-top:10%;
+    }
+    .h2Text{
+        color:darkgreen;
+    }
+.h1SecondTitle{
+    color:darkmagenta;
+}
+.h1Certify{
+    color:darkturquoise;
+}
+.nazwaFirmy{
+    color:darkblue;
+}
+/*     Lorry         */
+.loryPage{
+    text-align:center;
+   
+    height:85vh;
+    font-size:1.3rem;
+    padding:10px;
+}
+
+/*Java Script*/
+.jsPage{
+    text-align:center;
+    font-size:1.5rem;
+   
+    height:85vh;
+    padding:10px;
+}
 }
